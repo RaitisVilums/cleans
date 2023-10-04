@@ -36,7 +36,7 @@ const Contacts = () => {
             Lai uzzinātu savu cenu sūtiet bildes uz Whatsapp, E-pastu, vai
             Zvaniet.
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-[repeat(2,320px)] lg:grid-cols-[repeat(4,320px)] gap-5  md:gap-10 lg:gap-15 p-10 justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-[repeat(2,320px)] lg:grid-cols-[repeat(4,250px)] gap-2  md:gap-5 lg:gap-10 p-10 justify-center">
             {ContactsInfo.map((contact, index) => (
               <div
                 key={index}

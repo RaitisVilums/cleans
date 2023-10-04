@@ -16,10 +16,8 @@ const Piedavajums = () => {
               </h2>
               <div className="relative w-full h-[250px] md:h-[300px]">
                 <img
-                  className="rounded-lg"
+                  className="rounded-lg absolute inset-0 w-full h-full object-cover"
                   src={item.image}
-                  fill
-                  priority
                   alt={item.alt}
                 />
               </div>
