@@ -1,13 +1,88 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-blue: #2a9df4;
+  --secondary-blue: #1167b1;
+
+  --transition: all 0.3s ease-in-out;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+section {
+  @apply flex justify-center;
+}
+
+.menu_btn {
+  position: relative;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger_btn {
+  width: 30px;
+  height: 3px;
+  background: white;
+  position: fixed;
+  transition: var(--transition);
+}
+.burger_btn::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background: white;
+  transition: var(--transition);
+}
+.burger_btn::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background: white;
+  transition: var(--transition);
+}
+
+.rotate {
+  transform: rotate(135deg);
+  background: white;
+}
+
+.rotate::after {
+  top: 0px;
+  transform: rotate(-90deg);
+  background: white;
+}
+
+.rotate::before {
+  opacity: 0;
+  background: white;
+}
+
+.hero_background {
+  background: url("./assets/heroBackground.jpg") no-repeat center / cover;
+}
+
+.backdrop {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.gradient_background {
+  background: linear-gradient(to right, #2a9df4, #1167b1);
+}
+
+.header_fixed {
+  transition: var(--transition);
+  position: fixed;
 }
